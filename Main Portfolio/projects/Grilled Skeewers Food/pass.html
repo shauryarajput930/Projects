@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Weekend Event Section */
+#weekend-event {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.weekend-event-content {
+    position: relative;
+    z-index: 2;
+}
+
+.event-card {
+    display: flex;
+    background: rgba(22, 22, 22, 0.85);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.event-date-badge {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 193, 7, 0.9);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    font-weight: bold;
+}
+
+.event-date-badge .event-month {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.event-date-badge .event-day {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.event-details {
+    flex: 1;
+    padding: 60px 40px;
+    position: relative;
+}
+
+.event-features {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.feature svg {
+    flex-shrink: 0;
+}
+
+.event-description {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.event-cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.event-price {
+    font-size: 1.2rem;
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.event-image {
+    flex: 1;
+    min-width: 400px;
+    position: relative;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(22,22,22,0.8) 0%, rgba(22,22,22,0) 100%);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-image {
+        min-width: 100%;
+        height: 300px;
+    }
+    
+    .event-date-badge {
+        top: 20px;
+        left: 20px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .event-details {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .event-date-badge {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .event-date-badge .event-month {
+        font-size: 0.8rem;
+    }
+    
+    .event-date-badge .event-day {
+        font-size: 1.5rem;
+    }
+}
+</style>
+<body>
+    <section id="weekend-event">
+        <div class="video-container">
+            <video autoplay muted loop class="video-background">
+                <source src="./assets/27678-365460609.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="container">
+            <div class="weekend-event-content">
+                <div class="event-card">
+                    <div class="event-date-badge">
+                        <span class="event-month"></span>
+                        <span class="event-day"></span>
+                    </div>
+                    
+                    <div class="event-details">
+                        <h2 class="heading">BBQ <span class="yellow-text">Weekend</span> Fest</h2>
+                        <p class="subheading">Live Music • Craft Beer • Fire Grilled Goodness</p>
+                        
+                        <div class="event-features">
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 18V5l12-2v13"></path>
+                                    <circle cx="6" cy="18" r="3"></circle>
+                                    <circle cx="18" cy="16" r="3"></circle>
+                                </svg>
+                                <span>Live Band Performance</span>
+                            </div>
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                <span>Unlimited BBQ Stations</span>
+                            </div>
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffc107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                                <span>Local Craft Beers</span>
+                            </div>
+                        </div>
+                        
+                        <p class="event-description">
+                            Join us every weekend for our signature BBQ festival featuring slow-smoked meats, 
+                            live music from local bands, and an extensive selection of craft beers. 
+                            Experience the ultimate backyard BBQ party with lawn games and fire pits!
+                        </p>
+                        
+                        <div class="event-cta">
+                            <a href="#contact" class="btn">Reserve Your Spot</a>
+                            <span class="event-price">$45 per person</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-image">
+                        <img src="./assets/event.jpg" alt="BBQ Weekend Event">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+     // Set event date (next Saturday)
+document.addEventListener('DOMContentLoaded', function() {
+    const today = new Date();
+    const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", 
+                       "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+    // Find next Saturday
+    let nextSaturday = new Date(today);
+    nextSaturday.setDate(today.getDate() + (6 - today.getDay() + 7) % 7);
+
+    document.querySelector('.event-month').textContent = monthNames[nextSaturday.getMonth()];
+    document.querySelector('.event-day').textContent = nextSaturday.getDate();
+});
+    </script>
+</body>
+</html>
